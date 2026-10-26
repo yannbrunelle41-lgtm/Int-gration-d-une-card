@@ -1,0 +1,171 @@
+/* outfit-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/outfit-v15-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* outfit-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/outfit-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* outfit-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/outfit-v15-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+body {
+    background-color: #0D192C;
+    padding: 6.2rem 2.4rem 6.2rem 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article {
+    font-family: 'Outfit';
+    background-color: #15263F;
+    border-radius: 1.5rem;
+    padding: 2.4rem;
+    max-width: 35rem;
+   
+}
+
+.product {
+    border-radius: 0.8rem;
+    margin-bottom: 2.4rem;
+    width: 100%;
+}
+
+.product-container {
+    position: relative;
+}
+
+.product-container::before {
+    content: "";
+    inset: 0;
+    background-color: transparent;
+    opacity: 50.3%;
+    position: absolute;
+    border-radius: 0.8rem;
+}
+
+.product-container:active::before {
+background-color: #00FFF8;
+}
+
+h1:active, .name:active {
+    color: #00FFF8;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1.2rem;
+}
+
+.description {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    font-weight: 300;
+    color: #8BACD9;
+    margin-bottom: 1.6rem;
+}
+
+.price-time p:nth-child(1) {
+    color: #00FFF8;
+    font-weight: 600;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.price-time p:nth-child(2) {
+    font-size: 1.5rem;
+    color: #8BACD9;
+    display: flex;
+    align-items: center;
+}
+
+.creator p {
+    font-size: 1.5rem;
+    color: #8BACD9;
+}
+
+.name {
+    color: white;
+}
+
+
+
+.price-time {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.6rem;
+}
+
+.price-time p:nth-child(1)::before {
+    content: "";
+    display: inline-block;
+    background-image: url(../img/losange.svg);
+    width: 1.1rem;
+    height: 1.8rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 0.648rem;
+}
+
+.price-time p:nth-child(2)::before {
+    content: "";
+    display: inline-block;
+    background-image: url(../img/Clock.svg);
+    width: 1.6rem;
+    height: 1.6rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 0.77rem;
+}
+
+.creator {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 1.6rem;
+}
+
+.creator::before {
+    content: "";
+    position: absolute;
+    border: #2E405A solid 0.05rem;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.creator img {
+    margin-right: 1.6rem;
+}
+
+@media (min-width: 48em) {
+
+.product-container:hover::before { /* on cible le container avec le hover puis on sélectionne le pseudo-élélent */
+    background-color: #00FFF8;
+    cursor: pointer; /* comme le hover est sur un pseudo-élément on est obligé d'utiliser cette propriété parce que reset.css ne prend pas cet élément en charge */
+}
+
+h1:hover, .name:hover {
+    color: #00FFF8;
+    cursor: pointer;
+}
+
+}
